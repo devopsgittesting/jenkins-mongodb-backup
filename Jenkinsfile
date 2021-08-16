@@ -17,7 +17,7 @@ stage('Deploy to Production') {
 			echo '*** Executing remote commands ***'
 	 		sh '''#!/bin/bash
 			hostname
-				ssh root@192.168.0.108 >> ENDSSH
+				sudo ssh -t -t root@192.168.0.108 >> ENDSSH
 			date  
 			hostname
 '''
