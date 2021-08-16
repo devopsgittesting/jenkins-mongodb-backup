@@ -17,7 +17,8 @@ stage('Deploy to Production') {
 			echo '*** Executing remote commands ***'
 	 		sh '''#!/bin/bash
 				ssh root@192.168.0.108 >> ENDSSH
-			date    
+			date  
+			mongodump --out /root/mongobackup_16082021
 '''
                 }
             }
