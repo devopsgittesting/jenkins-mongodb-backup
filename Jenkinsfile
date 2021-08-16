@@ -1,6 +1,9 @@
 pipeline { 
   
    agent any
+  
+   stages {
+  
 stage('Deploy to Production') {
             when {
                 expression { 
@@ -13,4 +16,5 @@ stage('Deploy to Production') {
                     """
                 }
             }
+}
 }
