@@ -18,7 +18,7 @@ stage('Deploy to Production') {
 	 		sh '''#!/bin/bash
 				ssh root@192.168.0.108 >> ENDSSH
 			date  
-			sudo mongodump --port 27017 --db=testone --out=/root/mongobackup_16082021
+			hostname
 '''
                 }
             }
